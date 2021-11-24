@@ -183,18 +183,23 @@ $("#task-form-modal .btn-primary").click(function() {
 });
 
 // task text was clicked
-$(".list-group").on("click", "p", function() {
-  // get current text of p element
-  var text = $(this)
+$(".list-group").on("click", "span", function() {
+  // get current text 
+  var date = $(this)
     .text()
     .trim();
 
   // replace p element with a new textarea
-  var textInput = $("<textarea>").addClass("form-control").val(text);
-  $(this).replaceWith(textInput);
+  var dateInput = $("<input>").attr("type", "text").("form-control").val(date);
+  $(this).replaceWith(dateInput);
 
-  // auto focus new element
-  textInput.trigger("focus");
+  // enable jquery ui datepicker
+  dateInput.datepicker({
+    minDate:1
+  });
+
+  //automatically bring up the calender
+  dateInput.trigger("focus");
 });
 
 // editable field was un-focused
