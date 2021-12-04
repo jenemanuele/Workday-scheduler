@@ -16,4 +16,4 @@ Made with ❤️ by [Jen Emanuele}
 
 ### ©️2021 
 
-![Alt text](/relative/path/to/iScrShtWDS.PNG?raw=true "Optional Title"
+
