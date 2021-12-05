@@ -5,8 +5,7 @@
 
 
 ## Purpose
-A website that offers online marketing. 
-
+A website that offers day scheduling by date, with color codes for past, present and future.
 ## Built With
 * HTML
 
