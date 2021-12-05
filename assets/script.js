@@ -3,11 +3,12 @@ $('button').on('click',handleClick);
 $('.jumbotron').append(`<h1 class='display-4 text-center'>${moment().format('LL')}</h1>`);
 
 var tasks = localStorage.tasks.split(',,');
+if (tasks != undefined) {
+    for(let i=0; i<$('textarea').length;i++){
+        $('textarea')[i].value = tasks[i];
+    }
+}
 
-for(let i=0; i<$('textarea').length;i++){
-    $('textarea')[i].value = tasks[i];
-};
-2
 function handleClick() {
     let output = ''
     for(let i=0; i<$('textarea').length;i++){
