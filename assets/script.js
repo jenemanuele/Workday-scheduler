@@ -1,8 +1,4 @@
 
-
-
-
-
 $('button').on('click',handleClick);
 $('.jumbotron').append(`<h1 class='display-4 text-center'>${moment().format('LL')}</h1>`);
 
@@ -11,7 +7,7 @@ var tasks = localStorage.tasks.split(',,');
 for(let i=0; i<$('textarea').length;i++){
     $('textarea')[i].value = tasks[i];
 };
-
+2
 function handleClick() {
     let output = ''
     for(let i=0; i<$('textarea').length;i++){
@@ -22,15 +18,22 @@ function handleClick() {
 };
 
 
+var today = new Date();
+var currentHour = today.getHours();
+// for (i = 0; i < )
+var textHighlights = $('.text-highlight');
+for (i = 9; i < 18; i++) {
+    var selector = '.highlight-' + i;
+    var myHighlight = $(selector);
+    
+    if ( i === currentHour) {
+        myHighlight.addClass('present');   
+    } else if (i < currentHour) {
+        myHighlight.addClass('past');
+    } else if( i > currentHour) {
+        myHighlight.addClass('future');
+    }
+}   
 
-//get today's date
 
-//var today = new Date();
-//var dd = String(today.getDate()).padStart(2, '0');
-//var mm = String(today.getMonth() + 1).padStart(2, '0'); //january is 0
-//var yyyy = today.getFullYear();
 
-//today = mm + '/' + dd + '/' + yyyy;
-//ocument.write(today);
-
-//console.log(today);
