@@ -18,6 +18,8 @@ function handleClick() {
     console.log(output);
 };
 
+//**********to check for local storage: can call: localStorage.setItem('tasks', '') on top of js file line 1
+
 
 var today = new Date();
 var currentHour = today.getHours();
